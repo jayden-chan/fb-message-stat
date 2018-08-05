@@ -11,6 +11,9 @@ func main() {
 
 	fmt.Println(*filePath)
 	thread := initializeThread(*filePath)
-	fmt.Println(thread.self)
-	fmt.Println(thread.distribution)
+	fmt.Println("Messages:", len(thread.Messages))
+	fmt.Println("Distribution:", thread.messageDist)
+	fmt.Println("By words:", thread.wordDist)
+	fmt.Println("Total words:", thread.words)
+	fmt.Println("Average words per message:", float64(thread.words)/float64(len(thread.Messages)))
 }
